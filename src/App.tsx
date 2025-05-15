@@ -1,15 +1,9 @@
-//import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
+
 import './App.css'
 //import { Link, Route, Routes } from 'react-router-dom'
-import InfoCard from './components/InfoCard'
 import Header from './components/Header'
-import DefinitionItem from './components/DefinitionItem'
-import UseInfoItem from './components/UseInfoItem'
+
 import PrivacyPolicyPage from './components/PrivacyPolicyPage'
-import PolicySection from './components/PolicySection'
-import DataSecurityItem from './components/DataSecurityItem'
 
 function App() {
   //const [count, setCount] = useState(0)

@@ -1,11 +1,8 @@
 "use client";
-import * as React from "react";
-import Header from "./Header";
 import PolicySection from "./PolicySection";
 import DefinitionItem from "./DefinitionItem";
 import InfoCard from "./InfoCard";
 import UseInfoItem from "./UseInfoItem";
-import DataSecurityItem from "./DataSecurityItem";
 
 function PrivacyPolicyPage() {
   return (
