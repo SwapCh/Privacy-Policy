@@ -34,6 +34,7 @@ function PrivacyPolicyPage() {
         <div className="flex gap-5 max-md:flex-col">
           {/* Left Navigation Menu */}
           <aside className="w-1/4 bg-sky-700 shadow-lg p-6 min-h-screen sticky top-0 overflow-y-auto max-md:w-full max-md:min-h-0 max-md:sticky">
+            <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
             <nav>
               <ul className="space-y-3">
                 <li>
@@ -433,9 +434,10 @@ function PrivacyPolicyPage() {
                 </section>
 
                 <section id="rights">
-                  <h2 className="mt-20 ml-6 text-2xl font-bold leading-none text-neutral-700 max-md:mt-10">
-                    YOUR RIGHTS
-                  </h2>
+                  <PolicySection
+                    title="YOUR RIGHTS"
+                    imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
+                  />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/1674bf419d777a34567ce58d6d6f5c32aef5b994?placeholderIfAbsent=true"
                     alt="Policy Information 1"
@@ -456,9 +458,10 @@ function PrivacyPolicyPage() {
                 </section>
 
                 <section id="changes">
-                  <h2 className="mt-20 ml-6 text-2xl font-bold leading-none text-neutral-700 max-md:mt-10">
-                    CHANGES TO PRIVACY POLICY
-                  </h2>
+                  <PolicySection
+                    title="CHANGES TO PRIVACY POLICY"
+                    imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
+                  />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d8766c9aadfaa6bdc1cc63d45ccd9c50687c9a1?placeholderIfAbsent=true"
                     alt="Policy Review Information"
@@ -493,9 +496,10 @@ function PrivacyPolicyPage() {
                 </section>
 
                 <section id="grievance">
-                  <h2 className="mt-20 ml-6 text-2xl font-bold leading-none text-neutral-700 max-md:mt-10">
-                    GRIEVANCE OFFICER DETAILS
-                  </h2>
+                  <PolicySection
+                    title="GRIEVANCE OFFICER DETAILS"
+                    imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
+                  />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/febcced22eb3915cffdbcec67503a420fd67cce6?placeholderIfAbsent=true"
                     alt="Grievance Officer Contact Information"
@@ -504,9 +508,10 @@ function PrivacyPolicyPage() {
                 </section>
 
                 <section id="contact">
-                  <h2 className="mt-20 ml-6 text-2xl font-bold leading-none text-neutral-700 max-md:mt-10">
-                    CONTACT US
-                  </h2>
+                  <PolicySection
+                    title="CONTACT US"
+                    imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
+                  />
                   {/* ... existing contact content ... */}
                 </section>
               </article>
