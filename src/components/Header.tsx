@@ -1,5 +1,33 @@
+import { useState } from 'react';
+
+interface NavItem {
+  id: string;
+  title: string;
+  href: string;
+}
+
+const navItems: NavItem[] = [
+  { id: 'background', title: 'Background', href: '#background' },
+  { id: 'definitions', title: 'Definitions', href: '#definitions' },
+  { id: 'collection', title: 'Collection of Information', href: '#collection' },
+  { id: 'use', title: 'Use of Information', href: '#use' },
+  { id: 'disclosure', title: 'Disclosure and Transfer', href: '#disclosure' },
+  { id: 'cookies', title: 'Cookies & Tracking', href: '#cookies' },
+  { id: 'security', title: 'Data Security', href: '#security' },
+  { id: 'retention', title: 'Data Retention', href: '#retention' },
+  { id: 'rights', title: 'Your Rights', href: '#rights' },
+  { id: 'changes', title: 'Changes to Privacy Policy', href: '#changes' },
+  { id: 'grievance', title: 'Grievance Officer', href: '#grievance' },
+  { id: 'contact', title: 'Contact Us', href: '#contact' }
+];
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="flex overflow-hidden flex-wrap gap-5 justify-between py-2.5 pr-16 pl-3.5 w-full bg-white shadow-[0px_-8px_62px_rgba(0,0,0,0.12)] max-md:pr-5 max-md:max-w-full">
       <img
