@@ -1,14 +1,4 @@
-import { useState } from 'react';
-
-interface NavItem {
-  id: string;
-  title: string;
-  href: string;
-}
-
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <header className="flex overflow-hidden flex-wrap gap-5 justify-between py-2.5 pr-16 pl-3.5 w-full bg-white shadow-[0px_-8px_62px_rgba(0,0,0,0.12)] max-md:pr-5 max-md:max-w-full">
       <img

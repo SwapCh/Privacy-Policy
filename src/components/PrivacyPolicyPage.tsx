@@ -3,11 +3,8 @@ import PolicySection from "./PolicySection";
 import DefinitionItem from "./DefinitionItem";
 import InfoCard from "./InfoCard";
 import UseInfoItem from "./UseInfoItem";
-import { useState } from "react";
 
 function PrivacyPolicyPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <main className="flex overflow-hidden flex-col bg-white pb-[532px] max-md:pb-24">
       <div className="w-full max-w-full">
