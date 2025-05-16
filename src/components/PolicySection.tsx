@@ -1,5 +1,3 @@
-import React from "react";
-
 interface PolicySectionProps {
   title: string;
   imageUrl: string;

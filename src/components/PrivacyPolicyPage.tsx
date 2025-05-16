@@ -3,30 +3,10 @@ import PolicySection from "./PolicySection";
 import DefinitionItem from "./DefinitionItem";
 import InfoCard from "./InfoCard";
 import UseInfoItem from "./UseInfoItem";
-import Header from "./Header";
 import { useState } from "react";
-
-const navItems = [
-  { id: 'background', title: 'Background' },
-  { id: 'definitions', title: 'Definitions' },
-  { id: 'collection', title: 'Collection of Information' },
-  { id: 'use', title: 'Use of Information' },
-  { id: 'disclosure', title: 'Disclosure and Transfer' },
-  { id: 'cookies', title: 'Cookies & Tracking' },
-  { id: 'security', title: 'Data Security' },
-  { id: 'retention', title: 'Data Retention' },
-  { id: 'rights', title: 'Your Rights' },
-  { id: 'changes', title: 'Changes to Privacy Policy' },
-  { id: 'grievance', title: 'Grievance Officer' },
-  { id: 'contact', title: 'Contact Us' }
-];
 
 function PrivacyPolicyPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <main className="flex overflow-hidden flex-col bg-white pb-[532px] max-md:pb-24">
