@@ -3,77 +3,71 @@ import PolicySection from "./PolicySection";
 import DefinitionItem from "./DefinitionItem";
 import InfoCard from "./InfoCard";
 import UseInfoItem from "./UseInfoItem";
+import { useState } from "react";
 
 function PrivacyPolicyPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <main className="flex overflow-hidden flex-col bg-white pb-[532px] max-md:pb-24">
       <div className="w-full max-w-full">
         <div className="flex gap-5 max-md:flex-col">
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="hidden max-md:flex items-center p-2 text-white bg-sky-700 rounded-lg hover:bg-sky-600 focus:outline-none fixed top-4 right-4 z-50"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </button>
+
           {/* Left Navigation Menu */}
-          <aside className="w-1/4 bg-sky-700 shadow-lg p-6 min-h-screen sticky top-0 overflow-y-auto max-md:w-full max-md:min-h-0 max-md:sticky">
+          <aside className={`w-1/4 bg-sky-700 shadow-lg p-6 min-h-screen sticky top-0 overflow-y-auto transition-all duration-300 ease-in-out z-40
+            max-md:w-full max-md:min-h-0 max-md:fixed max-md:left-0 max-md:right-0 
+            ${isMenuOpen ? 'max-md:translate-y-0' : 'max-md:-translate-y-full'}`}>
             <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
             <nav>
               <ul className="space-y-3">
-                <li>
-                  <a href="#background" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Background
-                  </a>
-                </li>
-                <li>
-                  <a href="#definitions" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Definitions
-                  </a>
-                </li>
-                <li>
-                  <a href="#collection" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Collection of Information
-                  </a>
-                </li>
-                <li>
-                  <a href="#use" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Use of Information
-                  </a>
-                </li>
-                <li>
-                  <a href="#disclosure" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Disclosure and Transfer
-                  </a>
-                </li>
-                <li>
-                  <a href="#cookies" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Cookies & Tracking
-                  </a>
-                </li>
-                <li>
-                  <a href="#security" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Data Security
-                  </a>
-                </li>
-                <li>
-                  <a href="#retention" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Data Retention
-                  </a>
-                </li>
-                <li>
-                  <a href="#rights" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Your Rights
-                  </a>
-                </li>
-                <li>
-                  <a href="#changes" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Changes to Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#grievance" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Grievance Officer
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
-                    Contact Us
-                  </a>
-                </li>
+                {[
+                  { href: '#background', text: 'Background' },
+                  { href: '#definitions', text: 'Definitions' },
+                  { href: '#collection', text: 'Collection of Information' },
+                  { href: '#use', text: 'Use of Information' },
+                  { href: '#disclosure', text: 'Disclosure and Transfer' },
+                  { href: '#cookies', text: 'Cookies & Tracking' },
+                  { href: '#security', text: 'Data Security' },
+                  { href: '#retention', text: 'Data Retention' },
+                  { href: '#rights', text: 'Your Rights' },
+                  { href: '#changes', text: 'Changes to Privacy Policy' },
+                  { href: '#grievance', text: 'Grievance Officer' },
+                  { href: '#contact', text: 'Contact Us' }
+                ].map((item) => (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg"
+                    >
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </aside>
