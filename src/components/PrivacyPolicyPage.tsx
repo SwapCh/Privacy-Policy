@@ -33,66 +33,66 @@ function PrivacyPolicyPage() {
       <div className="w-full max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           {/* Left Navigation Menu */}
-          <aside className="w-1/4 bg-white shadow-lg p-6 min-h-screen sticky top-0 overflow-y-auto max-md:w-full max-md:min-h-0 max-md:sticky">
+          <aside className="w-1/4 bg-sky-700 shadow-lg p-6 min-h-screen sticky top-0 overflow-y-auto max-md:w-full max-md:min-h-0 max-md:sticky">
             <nav>
               <ul className="space-y-3">
                 <li>
-                  <a href="#background" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#background" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Background
                   </a>
                 </li>
                 <li>
-                  <a href="#definitions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#definitions" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Definitions
                   </a>
                 </li>
                 <li>
-                  <a href="#collection" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#collection" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Collection of Information
                   </a>
                 </li>
                 <li>
-                  <a href="#use" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#use" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Use of Information
                   </a>
                 </li>
                 <li>
-                  <a href="#disclosure" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#disclosure" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Disclosure and Transfer
                   </a>
                 </li>
                 <li>
-                  <a href="#cookies" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#cookies" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Cookies & Tracking
                   </a>
                 </li>
                 <li>
-                  <a href="#security" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#security" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Data Security
                   </a>
                 </li>
                 <li>
-                  <a href="#retention" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#retention" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Data Retention
                   </a>
                 </li>
                 <li>
-                  <a href="#rights" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#rights" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Your Rights
                   </a>
                 </li>
                 <li>
-                  <a href="#changes" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#changes" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Changes to Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#grievance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#grievance" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Grievance Officer
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 font-medium text-lg">
+                  <a href="#contact" className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg">
                     Contact Us
                   </a>
                 </li>
