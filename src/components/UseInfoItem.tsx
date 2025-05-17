@@ -14,21 +14,23 @@ const UseInfoItem: React.FC<UseInfoItemProps> = ({
   isLarge = false,
 }) => {
   return (
-    <div className="flex flex-wrap gap-1.5 mt-3 w-full text-lg font-medium leading-none rounded-none text-zinc-800">
+    <div className="flex flex-wrap gap-4 mt-3 w-full text-lg font-medium leading-normal text-zinc-800 max-md:flex-col max-md:items-center">
       <img
         src={imageUrl}
         alt="Icon"
-        className="object-contain shrink-0 aspect-square w-[78px]"
+        className="object-contain w-[78px] h-[78px] flex-shrink-0 max-md:w-[60px] max-md:h-[60px]"
       />
       <div
-        className={`flex relative flex-col grow shrink-0 px-5 py-5 my-auto basis-0 min-h-[61px] rounded-[47px] w-fit max-md:max-w-full ${isLarge ? "py-3.5 min-h-[103px]" : ""}`}
+        className={`flex relative flex-col grow px-5 py-5 my-auto rounded-[47px] w-fit max-w-full ${
+          isLarge ? "min-h-[103px]" : "min-h-[61px]"
+        } max-md:px-4 max-md:py-4 max-md:text-base max-md:text-center`}
       >
         <img
           src={bubbleImageUrl}
           alt="Bubble background"
           className="object-cover absolute inset-0 size-full"
         />
-        {text}
+        <span className="relative z-10">{text}</span>
       </div>
     </div>
   );

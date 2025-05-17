@@ -38,8 +38,8 @@ function PrivacyPolicyPage() {
           </button>
 
           {/* Left Navigation Menu */}
-          <aside className={`w-1/4 bg-sky-700 shadow-lg p-6 min-h-screen sticky top-0 overflow-y-auto transition-all duration-300 ease-in-out z-40
-            max-md:w-full max-md:min-h-0 max-md:fixed max-md:left-0 max-md:right-0 
+          <aside className={`w-1/4 bg-sky-700 p-6 min-h-screen sticky top-0 
+            max-md:w-full max-md:min-h-0 max-md:fixed max-md:left-0 max-md:right-0 max-md:z-40 max-md:transition-transform max-md:duration-300 max-md:ease-in-out
             ${isMenuOpen ? 'max-md:translate-y-0' : 'max-md:-translate-y-full'}`}>
             <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
             <nav>
@@ -73,9 +73,9 @@ function PrivacyPolicyPage() {
           </aside>
 
           {/* Main Content */}
-          <div className="w-3/4 max-md:w-full">
+          <div className="w-3/4 max-md:w-full max-md:px-4">
             <div className="flex flex-col w-full max-md:max-w-full">
-              <article className="flex flex-col items-start self-center mt-9 max-w-full w-[962px]">
+              <article className="prose prose-lg max-w-none">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/e93d23eae3a0b70ccaef29ad6a5cc31bf2ac8207?placeholderIfAbsent=true"
                   alt="Privacy Policy Banner"
@@ -88,7 +88,7 @@ function PrivacyPolicyPage() {
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d2cb66f6ca71497536f0011ac7874c00a937fa46?placeholderIfAbsent=true"
                   />
 
-                  <p className="self-stretch mt-8 mr-7 ml-3 text-lg font-medium leading-7 text-zinc-600 max-md:mr-2.5 max-md:max-w-full">
+                  <p className="self-stretch mt-8 mr-7 ml-3 text-lg font-medium leading-7 text-zinc-600 max-md:mr-2.5 max-md:ml-2.5 max-md:text-base">
                     This Privacy Policy is formulated in compliance with Section
                     43A of the Information Technology Act, 2000 and the
                     Information Technology (Reasonable Security Practices and
@@ -112,7 +112,7 @@ function PrivacyPolicyPage() {
                   />
                 </section>
 
-                <section id="definitions">
+                <section id="definitions" className="max-md:px-2.5">
                   <PolicySection
                     title="DEFINITIONS"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/9a4d41c72c638f44b1c2342b175ac39ce0df149f?placeholderIfAbsent=true"
@@ -205,7 +205,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="use">
+                <section id="use" className="max-md:px-2.5">
                   <PolicySection
                     title="USE OF INFORMATION"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/a1bbc437316a03da06cad4bbdeff8bfae7caf3ac?placeholderIfAbsent=true"
@@ -292,7 +292,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="disclosure">
+                <section id="disclosure" className="max-md:px-2.5">
                   <PolicySection
                     title="DISCLOSURE AND TRANSFER OF INFORMATION"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d03ef235975167fcf295ef37ade19e6b2b138aae?placeholderIfAbsent=true"
@@ -314,7 +314,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="cookies">
+                <section id="cookies" className="max-md:px-2.5">
                   <PolicySection
                     title="COOKIES, WEB BEACONS AND TRACKING TECHNOLOGIES"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
@@ -353,7 +353,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="security">
+                <section id="security" className="max-md:px-2.5">
                   <PolicySection
                     title="DATA SECURITY"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d88e3e4f1c6c0850cf33a8fbe57fd93b9490e9f2?placeholderIfAbsent=true"
@@ -372,7 +372,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="retention">
+                <section id="retention" className="max-md:px-2.5">
                   <PolicySection
                     title="DATA RETENTION"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/49d5529a2bd4dcda12ef1230e47b3bcabf8fc0ed?placeholderIfAbsent=true"
@@ -404,7 +404,7 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="rights">
+                <section id="rights" className="max-md:px-2.5">
                   <PolicySection
                     title="YOUR RIGHTS"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
@@ -428,7 +428,7 @@ function PrivacyPolicyPage() {
                   />
                 </section>
 
-                <section id="changes">
+                <section id="changes" className="max-md:px-2.5">
                   <PolicySection
                     title="CHANGES TO PRIVACY POLICY"
                     imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
@@ -466,24 +466,12 @@ function PrivacyPolicyPage() {
                   </div>
                 </section>
 
-                <section id="grievance">
-                  <PolicySection
-                    title="GRIEVANCE OFFICER DETAILS"
-                    imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
-                  />
+                <section id="grievance" className="max-md:px-2.5">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/febcced22eb3915cffdbcec67503a420fd67cce6?placeholderIfAbsent=true"
                     alt="Grievance Officer Contact Information"
-                    className="object-contain mt-24 ml-3.5 max-w-full rounded-2xl aspect-[3.05] shadow-[0px_1px_16px_rgba(0,0,0,0.25)] w-[868px] max-md:mt-10"
+                    className="object-contain mt-8 ml-3.5 max-w-full rounded-2xl aspect-[3.05] shadow-[0px_1px_16px_rgba(0,0,0,0.25)] w-[868px] max-md:mt-10"
                   />
-                </section>
-
-                <section id="contact">
-                  <PolicySection
-                    title="CONTACT US"
-                    imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
-                  />
-                  {/* ... existing contact content ... */}
                 </section>
               </article>
             </div>
