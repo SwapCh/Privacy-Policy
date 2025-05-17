@@ -405,10 +405,6 @@ function PrivacyPolicyPage() {
                 </section>
 
                 <section id="rights" className="max-md:px-2.5">
-                  <PolicySection
-                    title="YOUR RIGHTS"
-                    imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/d527b4de965766fb89512ce1cd52970732103cb1?placeholderIfAbsent=true"
-                  />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/1674bf419d777a34567ce58d6d6f5c32aef5b994?placeholderIfAbsent=true"
                     alt="Policy Information 1"
@@ -450,13 +446,13 @@ function PrivacyPolicyPage() {
                     for Board approval and implemented prospectively
                   </div>
 
-                  <div className="flex overflow-hidden relative flex-col px-16 pt-96 pb-28 mt-20 ml-3.5 max-w-full text-lg font-medium min-h-[557px] shadow-[0px_2px_13px_rgba(0,0,0,0.16)] w-[868px] max-md:px-5 max-md:py-24 max-md:mt-10">
+                  <div className="flex overflow-hidden relative flex-col px-16 pt-96 pb-28 mt-20 ml-3.5 max-w-full text-lg font-medium min-h-[557px] shadow-[0px_2px_13px_rgba(0,0,0,0.16)] w-[868px] max-md:px-4 max-md:py-10 max-md:mt-10 max-md:ml-0 max-md:w-full">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6dd492ed066ed60df8a130ab43546e6b26d85d8?placeholderIfAbsent=true"
                       alt="Background"
-                      className="object-cover absolute inset-0 size-full"
+                      className="object-contain absolute inset-0 size-full max-md:object-scale-down max-md:relative max-md:w-full max-md:h-auto"
                     />
-                    <div className="flex overflow-hidden relative flex-wrap gap-4 px-3.5 pt-2.5 pb-6 mb-0 bg-red-100 max-md:mb-2.5">
+                    <div className="flex overflow-hidden relative flex-wrap gap-4 px-3.5 pt-2.5 pb-6 mb-0 bg-red-100 max-md:mb-2.5 max-md:mt-8 max-md:w-full">
                       <span className="self-start leading-none text-red-600">**</span>
                       <p className="flex-auto leading-7 text-neutral-600 w-[641px] max-md:max-w-full">
                         For complex cases, users will be notified of any delay and
@@ -493,62 +489,104 @@ function DataSecuritySection() {
       </p>
 
       <div className="z-10 self-start mt-1 w-full max-w-[1104px] max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
-          <div className="w-[56%] max-md:ml-0 max-md:w-full">
+        {/* Desktop View */}
+        <div className="flex gap-5 max-md:hidden">
+          <div className="w-[56%]">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f2611b35803e965a605ad8719de3e2211c7b0ea?placeholderIfAbsent=true"
               alt="Encryption Illustration"
-              className="object-contain grow w-full rounded-full aspect-[1.1] max-md:max-w-full"
+              className="object-contain grow w-full rounded-full aspect-[1.1]"
             />
           </div>
-          <div className="ml-5 w-[44%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow items-start mt-16 text-xl font-semibold leading-tight text-sky-700 max-md:mt-10 max-md:max-w-full">
+          <div className="ml-5 w-[44%]">
+            <div className="flex flex-col grow items-start mt-16 text-xl font-semibold leading-tight text-sky-700">
               <h3>Access Management</h3>
               <p className="text-base font-medium leading-loose text-neutral-600">
                 Role-based access and multi-factor authentication.
               </p>
 
-              <div className="flex flex-col self-stretch pl-14 mt-32 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-                <h3 className="self-start ml-6 max-md:ml-2.5">
+              <div className="flex flex-col self-stretch pl-14 mt-8">
+                <h3 className="self-start ml-6">
                   IT Security Infrastructure
                 </h3>
-                <p className="self-end text-base font-medium leading-loose text-neutral-600 max-md:max-w-full">
+                <p className="self-end text-base font-medium leading-loose text-neutral-600">
                   Firewall protection, DDoS mitigation, malware detection.
                 </p>
 
-                <h3 className="self-start mt-36 max-md:mt-10">
+                <h3 className="self-start mt-8">
                   Data Center Security
                 </h3>
-                <p className="mr-11 text-base font-medium leading-loose text-neutral-600 max-md:mr-2.5">
+                <p className="mr-11 text-base font-medium leading-loose text-neutral-600">
                   Physical security and surveillance at server locations.
                 </p>
               </div>
 
-              <h3 className="mt-20 max-md:mt-10">Monitoring</h3>
+              <h3 className="mt-8">Monitoring</h3>
             </div>
           </div>
         </div>
+
+        {/* Mobile View */}
+        <div className="hidden max-md:block px-4 mt-6">
+          <ul className="space-y-6">
+            <li className="flex flex-col">
+              <h3 className="text-xl font-semibold text-sky-700">Access Management</h3>
+              <p className="text-base font-medium leading-loose text-neutral-600 mt-2">
+                Role-based access and multi-factor authentication.
+              </p>
+            </li>
+            
+            <li className="flex flex-col">
+              <h3 className="text-xl font-semibold text-sky-700">IT Security Infrastructure</h3>
+              <p className="text-base font-medium leading-loose text-neutral-600 mt-2">
+                Firewall protection, DDoS mitigation, malware detection.
+              </p>
+            </li>
+
+            <li className="flex flex-col">
+              <h3 className="text-xl font-semibold text-sky-700">Data Center Security</h3>
+              <p className="text-base font-medium leading-loose text-neutral-600 mt-2">
+                Physical security and surveillance at server locations.
+              </p>
+            </li>
+
+            <li className="flex flex-col">
+              <h3 className="text-xl font-semibold text-sky-700">Monitoring</h3>
+              <p className="text-base font-medium leading-loose text-neutral-600 mt-2">
+                Regular audits, log analysis, and breach simulations.
+              </p>
+            </li>
+
+            <li className="flex flex-col">
+              <h3 className="text-xl font-semibold text-sky-700">Training</h3>
+              <p className="text-base font-medium leading-loose text-neutral-600 mt-2">
+                Staff awareness programs and mandatory confidentiality obligations.
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div className="ml-8 max-w-full w-[777px]">
-        <div className="flex gap-5 max-md:flex-col">
-          <div className="w-[27%] max-md:ml-0 max-md:w-full">
+      {/* Hide the monitoring and training section in mobile view since it's included in the bullet points */}
+      <div className="ml-8 max-w-full w-[777px] max-md:hidden">
+        <div className="flex gap-5">
+          <div className="w-[27%]">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/8d14eb51e7b8d977c20b0e2b9d497fb8ffbd47c1?placeholderIfAbsent=true"
               alt="Monitoring Illustration"
-              className="object-contain shrink-0 self-stretch my-auto max-w-full aspect-[1.89] w-[198px] max-md:mt-10"
+              className="object-contain shrink-0 self-stretch my-auto max-w-full aspect-[1.89] w-[198px]"
             />
           </div>
-          <div className="ml-5 w-[73%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow text-base font-medium leading-loose text-neutral-600 max-md:mt-8 max-md:max-w-full">
+          <div className="ml-5 w-[73%]">
+            <div className="flex flex-col grow text-base font-medium leading-loose text-neutral-600">
               <p className="self-end">
                 Regular audits, log analysis, and breach simulations.
               </p>
 
-              <h3 className="self-start mt-16 text-xl font-semibold leading-tight text-sky-700 max-md:mt-10">
+              <h3 className="self-start mt-8 text-xl font-semibold leading-tight text-sky-700">
                 Training
               </h3>
-              <p className="max-md:mr-2.5 max-md:max-w-full">
+              <p className="mt-2">
                 Staff awareness programs and mandatory confidentiality
                 obligations.
               </p>
