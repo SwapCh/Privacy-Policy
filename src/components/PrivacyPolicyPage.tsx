@@ -13,7 +13,8 @@ function PrivacyPolicyPage() {
   };
 
   return (
-    <main className="flex overflow-hidden flex-col bg-white pb-[532px] max-md:pb-24">
+    // <main className="flex overflow-hidden flex-col bg-white pb-[532px] max-md:pb-24">
+    <main className="flex overflow-hidden flex-col bg-white max-md:pb-24">
       <div className="w-full max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           {/* Mobile Menu Button */}
@@ -37,10 +38,36 @@ function PrivacyPolicyPage() {
             </svg>
           </button>
 
+          {/* <button
+  onClick={toggleMenu}
+  className="flex items-center p-2 text-white bg-sky-700 rounded-lg hover:bg-sky-600 focus:outline-none fixed top-4 left-4 z-50"
+>
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+    />
+  </svg>
+</button> */}
+
           {/* Left Navigation Menu */}
-          <aside className={`w-1/4 bg-sky-700 p-6 min-h-screen sticky top-0 
+          {/* <aside className={`w-1/4 bg-sky-700 p-6 min-h-screen sticky top-0 
             max-md:w-full max-md:min-h-0 max-md:fixed max-md:left-0 max-md:right-0 max-md:z-40 max-md:transition-transform max-md:duration-300 max-md:ease-in-out
-            ${isMenuOpen ? 'max-md:translate-y-0' : 'max-md:-translate-y-full'}`}>
+            ${isMenuOpen ? 'max-md:translate-y-0' : 'max-md:-translate-y-full'}`}> */}
+
+          <aside
+  className={`
+    hidden md:block bg-sky-700 p-6 min-h-screen fixed top-0 left-0 w-72 h-full z-40
+  `}
+>
             <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
             <nav>
               <ul className="space-y-3">
@@ -72,8 +99,53 @@ function PrivacyPolicyPage() {
             </nav>
           </aside>
 
+          {/* <aside
+  className={`
+    fixed top-0 left-0 h-full w-72 bg-sky-700 p-6 z-40 transition-transform duration-300 ease-in-out
+    ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
+  `}
+>
+  <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
+  <nav>
+    <ul className="space-y-3">
+      {[
+        { href: '#background', text: 'Background' },
+        { href: '#definitions', text: 'Definitions' },
+        { href: '#collection', text: 'Collection of Information' },
+        { href: '#use', text: 'Use of Information' },
+        { href: '#disclosure', text: 'Disclosure and Transfer' },
+        { href: '#cookies', text: 'Cookies & Tracking' },
+        { href: '#security', text: 'Data Security' },
+        { href: '#retention', text: 'Data Retention' },
+        { href: '#rights', text: 'Your Rights' },
+        { href: '#changes', text: 'Changes to Privacy Policy' },
+        { href: '#grievance', text: 'Grievance Officer' },
+        { href: '#contact', text: 'Contact Us' }
+      ].map((item) => (
+        <li key={item.href}>
+          <a
+            href={item.href}
+            onClick={() => setIsMenuOpen(false)}
+            className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg"
+          >
+            {item.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside> */}
+{isMenuOpen && (
+  <div
+    className="fixed inset-0 bg-black bg-opacity-40 z-30"
+    onClick={() => setIsMenuOpen(false)}
+  />
+)}
+
           {/* Main Content */}
-          <div className="w-3/4 max-md:w-full max-md:px-4">
+          {/* <div className="w-3/4 max-md:w-full max-md:px-4"> */}
+          {/* <div className="md:ml-72 flex-1 w-full max-md:w-full max-md:px-4"> */}
+          <div className="md:ml-[18rem] md:pl-8 flex-1 w-full max-md:w-full max-md:px-4">
             <div className="flex flex-col w-full max-md:max-w-full">
               <article className="prose prose-lg max-w-none">
                 <img
@@ -461,6 +533,8 @@ function PrivacyPolicyPage() {
                     </div>
                   </div>
                 </section>
+
+                {/* <img src="src/image1.png" alt="..." /> */}
 
                 <section id="grievance" className="max-md:px-2.5">
                   <img
