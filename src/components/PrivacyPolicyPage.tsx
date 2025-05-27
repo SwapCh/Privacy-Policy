@@ -68,11 +68,12 @@ function PrivacyPolicyPage() {
     hidden md:block bg-sky-700 p-6 min-h-screen fixed top-0 left-0 w-72 h-full z-40
   `}
 >
-            <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
+            <h2 className="text-white text-2xl font-bold mb-3 border-b border-sky-500 pb-3">Table of Contents</h2>
             <nav>
-              <ul className="space-y-3">
+              <ul className="space-y-1">
                 {[
                   { href: '#background', text: 'Background' },
+                  { href: '#purpose', text: 'Purpose and Applicability' }, //Newly added
                   { href: '#definitions', text: 'Definitions' },
                   { href: '#collection', text: 'Collection of Information' },
                   { href: '#use', text: 'Use of Information' },
@@ -80,18 +81,110 @@ function PrivacyPolicyPage() {
                   { href: '#cookies', text: 'Cookies & Tracking' },
                   { href: '#security', text: 'Data Security' },
                   { href: '#retention', text: 'Data Retention' },
-                  { href: '#rights', text: 'Your Rights' },
-                  { href: '#changes', text: 'Changes to Privacy Policy' },
-                  { href: '#grievance', text: 'Grievance Officer' },
-                  { href: '#contact', text: 'Contact Us' }
+                  { href: '#consent', text: 'Consent' },
+                  { href: '#changes', text: 'Review of the Policy' },
+                  { href: '#grievance', text: 'Grievance Redressal' },
+                  { href: '#contact', text: 'Grievance officer' }
                 ].map((item) => (
                   <li key={item.href}>
                     <a
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg"
-                    >
+                      className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-xs">
+                      <span className="flex items-center">
+                        {item.href === '#background' && (
+                          <img
+                            src="\src\assets\background-logo.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#definitions' && (
+                          <img
+                            src="\src\assets\definations.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#purpose' && (
+                          <img
+                            src="\src\assets\purpose.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#collection' && (
+                          <img
+                            src="\src\assets\information.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#use' && (
+                          <img
+                            src="\src\assets\useinfo.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#disclosure' && (
+                          <img
+                            src="\src\assets\disclosure.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#cookies' && (
+                          <img
+                            src="\src\assets\cookies.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#security' && (
+                          <img
+                            src="\src\assets\data_security.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#retention' && (
+                          <img
+                            src="\src\assets\data_retention.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#consent' && (
+                          <img
+                            src="\src\assets\consent.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#changes' && (
+                          <img
+                            src="\src\assets\review.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#grievance' && (
+                          <img
+                            src="\src\assets\grievance_redressal.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#contact' && (
+                          <img
+                            src="\src\assets\grievance_officer.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
                       {item.text}
+                      </span>
                     </a>
                   </li>
                 ))}
@@ -99,13 +192,14 @@ function PrivacyPolicyPage() {
             </nav>
           </aside>
 
-          {/* <aside
+          <aside
   className={`
     fixed top-0 left-0 h-full w-72 bg-sky-700 p-6 z-40 transition-transform duration-300 ease-in-out
     ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
   `}
 >
   <h2 className="text-white text-2xl font-bold mb-6 border-b border-sky-500 pb-3">Table of Contents</h2>
+  {/* <h2 className="text-white text-xl font-bold mb-1 border-b border-sky-500 pb-1">Table of Contents</h2> */}
   <nav>
     <ul className="space-y-3">
       {[
@@ -134,7 +228,7 @@ function PrivacyPolicyPage() {
       ))}
     </ul>
   </nav>
-</aside> */}
+</aside>
 {isMenuOpen && (
   <div
     className="fixed inset-0 bg-black bg-opacity-40 z-30"
