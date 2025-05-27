@@ -203,18 +203,32 @@ function PrivacyPolicyPage() {
   <nav>
     <ul className="space-y-3">
       {[
+        // { href: '#background', text: 'Background' },
+        // { href: '#definitions', text: 'Definitions' },
+        // { href: '#collection', text: 'Collection of Information' },
+        // { href: '#use', text: 'Use of Information' },
+        // { href: '#disclosure', text: 'Disclosure and Transfer' },
+        // { href: '#cookies', text: 'Cookies & Tracking' },
+        // { href: '#security', text: 'Data Security' },
+        // { href: '#retention', text: 'Data Retention' },
+        // { href: '#rights', text: 'Your Rights' },
+        // { href: '#changes', text: 'Changes to Privacy Policy' },
+        // { href: '#grievance', text: 'Grievance Officer' },
+        // { href: '#contact', text: 'Contact Us' }
+
         { href: '#background', text: 'Background' },
-        { href: '#definitions', text: 'Definitions' },
-        { href: '#collection', text: 'Collection of Information' },
-        { href: '#use', text: 'Use of Information' },
-        { href: '#disclosure', text: 'Disclosure and Transfer' },
-        { href: '#cookies', text: 'Cookies & Tracking' },
-        { href: '#security', text: 'Data Security' },
-        { href: '#retention', text: 'Data Retention' },
-        { href: '#rights', text: 'Your Rights' },
-        { href: '#changes', text: 'Changes to Privacy Policy' },
-        { href: '#grievance', text: 'Grievance Officer' },
-        { href: '#contact', text: 'Contact Us' }
+                  { href: '#purpose', text: 'Purpose and Applicability' }, //Newly added
+                  { href: '#definitions', text: 'Definitions' },
+                  { href: '#collection', text: 'Collection of Information' },
+                  { href: '#use', text: 'Use of Information' },
+                  { href: '#disclosure', text: 'Disclosure and Transfer' },
+                  { href: '#cookies', text: 'Cookies & Tracking' },
+                  { href: '#security', text: 'Data Security' },
+                  { href: '#retention', text: 'Data Retention' },
+                  { href: '#consent', text: 'Consent' },
+                  { href: '#changes', text: 'Review of the Policy' },
+                  { href: '#grievance', text: 'Grievance Redressal' },
+                  { href: '#contact', text: 'Grievance officer' }
       ].map((item) => (
         <li key={item.href}>
           <a
@@ -222,13 +236,110 @@ function PrivacyPolicyPage() {
             onClick={() => setIsMenuOpen(false)}
             className="block px-4 py-2 text-white hover:bg-sky-600 rounded-lg transition-all duration-200 font-medium text-lg"
           >
+
+            
+                 
+                      <span className="flex items-center">
+                        {item.href === '#background' && (
+                          <img
+                            src="/src/assets/background-logo.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#definitions' && (
+                          <img
+                            src="/src/assets/definations.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#purpose' && (
+                          <img
+                            src="\src\assets\purpose.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#collection' && (
+                          <img
+                            src="\src\assets\information.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#use' && (
+                          <img
+                            src="\src\assets\useinfo.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#disclosure' && (
+                          <img
+                            src="\src\assets\disclosure.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#cookies' && (
+                          <img
+                            src="\src\assets\cookies.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#security' && (
+                          <img
+                            src="\src\assets\data_security.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#retention' && (
+                          <img
+                            src="\src\assets\data_retention.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#consent' && (
+                          <img
+                            src="\src\assets\consent.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#changes' && (
+                          <img
+                            src="\src\assets\review.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#grievance' && (
+                          <img
+                            src="\src\assets\grievance_redressal.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
+                        {item.href === '#contact' && (
+                          <img
+                            src="\src\assets\grievance_officer.png"
+                            alt="Logo"
+                            className="w-4 h-4 mr-2 inline-block"
+                          />
+                        )}
             {item.text}
+                      </span>
           </a>
         </li>
       ))}
     </ul>
   </nav>
 </aside>
+
 {isMenuOpen && (
   <div
     className="fixed inset-0 bg-black bg-opacity-40 z-30"
@@ -734,6 +845,8 @@ function DataSecuritySection() {
           </ul>
         </div>
       </div>
+
+      <img src="/src/assets/img.png" alt="" />
 
       {/* Hide the monitoring and training section in mobile view since it's included in the bullet points */}
       <div className="ml-8 max-w-full w-[777px] max-md:hidden">
